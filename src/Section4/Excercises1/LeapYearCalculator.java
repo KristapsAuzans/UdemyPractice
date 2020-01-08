@@ -1,4 +1,4 @@
-package Excercises1;
+package Section4.Excercises1;
 
 public class LeapYearCalculator {
     public static void main(String[] args) {

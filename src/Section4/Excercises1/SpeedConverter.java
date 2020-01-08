@@ -1,9 +1,9 @@
-package Excercises1;
+package Section4.Excercises1;
 
 public class SpeedConverter {
     public static void main(String[] args) {
 
-        printConversion(0);
+        printConversion(90);
         printConversion(10.25);
         printConversion(-5.6);
         printConversion(25.42);
