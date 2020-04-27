@@ -2,9 +2,8 @@ package Section5.Exercises2;
 
 public class NumbersToWords {
     public static void main(String[] args) {
-        numbersToWords(1000);
-        numbersToWords(123);
-        numbersToWords(155);
+        numberToWords(-15);
+
     }
 
     public static int getDigitCount(int number) {
@@ -12,8 +11,12 @@ public class NumbersToWords {
         int digitCount = 0;
         if (number < 0) {
             digitCount = -1;
-        } else {
-            for (int i = number; i > 0; i = i / 10) {
+        }
+        else if(number == 0){
+            digitCount = 1;
+        }
+        else {
+            for (int i = number; i >0; i = i / 10) {
                 digitCount++;
             }
         }
@@ -30,22 +33,22 @@ public class NumbersToWords {
 
             }
         } else {
-            reversedNumber = number;
+            number = number * (-1);
+            for (int i = number; i > 0; i = i / 10) {
+                reversedNumber = reversedNumber * 10 + i % 10;
+
+            }
+            reversedNumber = reversedNumber * (-1);
         }
         System.out.println(reversedNumber);
         return reversedNumber;
     }
 
-    public static void numbersToWords(int number) {
+    public static void numberToWords(int number) {
         int digitsInOriginalNumber = getDigitCount(number);
         number = reverse(number);
         int digitsInReversedNumber = getDigitCount(number);
-        if (digitsInOriginalNumber != digitsInReversedNumber) {
-            int difference = digitsInOriginalNumber - digitsInReversedNumber;
-            int multiplayer = (int) Math.pow(10, difference);
-            number = number * multiplayer;
-            System.out.println(number);
-        }
+
         if (number < 0) {
             System.out.println("Invalid Value");
         } else {
@@ -85,6 +88,13 @@ public class NumbersToWords {
                         System.out.println("Nine");
                         break;
                 }
+            }
+            if (digitsInOriginalNumber != digitsInReversedNumber) {
+                int difference = digitsInOriginalNumber - digitsInReversedNumber;
+                for (int i = difference; i > 0; i--) {
+                    System.out.println("Zero");
+                }
+
             }
 
 
