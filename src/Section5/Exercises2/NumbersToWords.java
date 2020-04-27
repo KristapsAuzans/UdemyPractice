@@ -2,7 +2,7 @@ package Section5.Exercises2;
 
 public class NumbersToWords {
     public static void main(String[] args) {
-        numberToWords(-15);
+        numberToWords(0);
 
     }
 
@@ -40,7 +40,7 @@ public class NumbersToWords {
             }
             reversedNumber = reversedNumber * (-1);
         }
-        System.out.println(reversedNumber);
+
         return reversedNumber;
     }
 
@@ -95,6 +95,9 @@ public class NumbersToWords {
                     System.out.println("Zero");
                 }
 
+            }
+            else if (number == 0){
+                System.out.println("Zero");
             }
 
 
