@@ -4,8 +4,7 @@ public class LargestPrime {
     public static void main(String[] args) {
         getLargestPrime(24);
         getLargestPrime(217);
-        getLargestPrime(0);
-        getLargestPrime(49);
+
     }
 
     public static int getLargestPrime(int number) {
@@ -14,23 +13,17 @@ public class LargestPrime {
         if (number <= 1) {
             result = -1;
         } else {
-            int multiplayer = 0;
-            int prime = 0;
-            for (int i = number; i > 1; i--) {
-                if (number % i == 0) {
-                    multiplayer = number / i;
-                    for (int j = multiplayer; j > 0; j--) {
-                        int count = 0;
-                        if (multiplayer % j == 0) {
-                            count++;
-                            if (count == 0) {
-                                prime = multiplayer;
-                                System.out.println(prime);
-                            }
-                        }
+            for (int i = 2; i < number; i++) {
+                while (number % i == 0) {
+                    System.out.println(i);
+                    number = number / i;
+                    if (i > result) {
+                        result = i;
                     }
-
                 }
+            }
+            if (number > result) {
+                result = number;
             }
         }
         return result;
