@@ -32,4 +32,6 @@ public class EvenNumber {
     }
 
 
+    public static class ReadingUserInputChallenge {
+    }
 }
