@@ -11,7 +11,7 @@ public class ReadingUserInputChallenge {
             boolean hasNextInt = scanner.hasNextInt();
             if (hasNextInt) {
                 int number = scanner.nextInt();
-                result = result + number;
+                result += number;
             } else {
                 System.out.println("Invalid value");
                 i--;
