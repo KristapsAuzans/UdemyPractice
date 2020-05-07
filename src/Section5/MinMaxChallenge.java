@@ -8,6 +8,7 @@ public class MinMaxChallenge {
         boolean isNumber = true;
         int maxNumber = 0;
         int minNumber = 0;
+        boolean first = true;
         while (isNumber) {
             System.out.println(" Enter number: ");
             isNumber = scanner.hasNextInt();
@@ -15,6 +16,10 @@ public class MinMaxChallenge {
                 int number = scanner.nextInt();
                 if(number>maxNumber){
                     maxNumber = number;
+                    if(first){
+                        minNumber = number;
+                        first = false;
+                    }
                 }
                 else if(number<minNumber){
                     minNumber = number;
