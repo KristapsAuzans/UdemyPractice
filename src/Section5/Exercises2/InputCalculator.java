@@ -11,7 +11,7 @@ public class InputCalculator {
     public static void inputThenPrintSumAndAverage() {
         Scanner scanner = new Scanner(System.in);
         int sum = 0;
-        double calculations = 0;
+        double calculations;
         long average = 0;
         int number;
         int count = 0;
