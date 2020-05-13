@@ -1,16 +1,16 @@
 package Section6.Exercises.Person;
 
 public class Person {
-    private String FirstName;
+    private String firstName;
     private String lastName;
     private int age;
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        FirstName = firstName;
+        this.firstName = firstName;
     }
 
     public String getLastName() {
@@ -35,15 +35,26 @@ public class Person {
 
     public boolean isTeen() {
         boolean teen = false;
-        if (age >= 12 && age <= 20) {
+        if (age > 12 && age < 20) {
             teen = true;
         }
         return teen;
     }
 
-    public void getFullName(){
-
-        System.out.println();
+    public String getFullName() {
+        String output;
+        String firstName = getFirstName();
+        String lastName = getLastName();
+        if (firstName.isEmpty() && lastName.isEmpty()) {
+            output="";
+        } else if (firstName.isEmpty()) {
+           output = lastName;
+        } else if (lastName.isEmpty()) {
+            output = firstName;
+        } else {
+          output= firstName + " "+ lastName;
+        }
+        return output;
     }
 
 
