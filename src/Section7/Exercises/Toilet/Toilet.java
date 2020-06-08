@@ -1,4 +1,4 @@
-package Section7.Composition.Exercises.Toilet;
+package Section7.Exercises.Toilet;
 
 public class Toilet {
     private Door door;
