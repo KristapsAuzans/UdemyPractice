@@ -8,7 +8,6 @@ public class MinimumElementChallenge {
     public static void main(String[] args) {
 
       findMin(readInteger(5));
-
     }
 
     public static int[] readInteger(int count) {
@@ -18,10 +17,9 @@ public class MinimumElementChallenge {
             System.out.println("Enter number: ");
             numbers[i] = scanner.nextInt();
         }
+        scanner.close();
         return numbers;
-
     }
-
 
     public static int findMin(int[] array) {
         int minNumber = array[0];
