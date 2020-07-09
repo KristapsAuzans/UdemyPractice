@@ -10,7 +10,7 @@ public class MinimumElementChallenge {
       findMin(readInteger(5));
     }
 
-    public static int[] readInteger(int count) {
+    private static int[] readInteger(int count) {
         int[] numbers = new int[count];
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < count; i++) {
@@ -21,7 +21,7 @@ public class MinimumElementChallenge {
         return numbers;
     }
 
-    public static int findMin(int[] array) {
+    private static int findMin(int[] array) {
         int minNumber = array[0];
         for (int i = 0; i < array.length; i++) {
             if (minNumber > array[i]) {

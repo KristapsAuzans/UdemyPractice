@@ -4,12 +4,12 @@ import java.util.Arrays;
 
 public class ReverseArrayChallenge {
     public static void main(String[] args) {
-        int[] numbers = {2, 5, 1, 5, 9};
+        int[] numbers = {2, 5, 1, 5, 9, 6};
         System.out.println("Array " + Arrays.toString(numbers));
         reverse(numbers);
     }
 
-    public static void reverse(int[] array) {
+    private static void reverse(int[] array) {
         int[] reversedArray = new int[array.length];
         int counter = 0;
         for (int i = array.length-1; i >= 0; i--) {
