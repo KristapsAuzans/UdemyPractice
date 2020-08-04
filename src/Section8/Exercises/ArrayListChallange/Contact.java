@@ -22,17 +22,9 @@ public class Contact {
         return phone;
     }
 
-    public static Contact createContact(String name, String phone){
+    public static Contact createContact(String name, String phone) {
         return new Contact(name, phone);
     }
-
-
-
-
-
-
-
-
 
 
 }
