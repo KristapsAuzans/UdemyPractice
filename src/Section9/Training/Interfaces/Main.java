@@ -1,7 +1,6 @@
-package Section9;
+package Section9.Training.Interfaces;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
